@@ -1,0 +1,12 @@
+2026-06-01 02:52:15.684 UTC,,,56,,6a1cf3df.38,1,,2026-06-01 02:52:15 UTC,,0,LOG,00000,"ending log output to stderr",,"Future log output will go to log destination ""csvlog"".",,,,,,,"","postmaster",,0
+2026-06-01 02:52:15.684 UTC,,,56,,6a1cf3df.38,2,,2026-06-01 02:52:15 UTC,,0,LOG,00000,"starting PostgreSQL 17.10 (Debian 17.10-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",,,,,,,,,"","postmaster",,0
+2026-06-01 02:52:15.695 UTC,,,56,,6a1cf3df.38,3,,2026-06-01 02:52:15 UTC,,0,LOG,00000,"listening on Unix socket ""/var/run/postgresql/.s.PGSQL.5432""",,,,,,,,,"","postmaster",,0
+2026-06-01 02:52:15.717 UTC,,,60,,6a1cf3df.3c,1,,2026-06-01 02:52:15 UTC,,0,LOG,00000,"database system was shut down at 2026-06-01 02:52:05 UTC",,,,,,,,,"","startup",,0
+2026-06-01 02:52:15.734 UTC,,,56,,6a1cf3df.38,4,,2026-06-01 02:52:15 UTC,,0,LOG,00000,"database system is ready to accept connections",,,,,,,,,"","postmaster",,0
+2026-06-01 02:52:16.110 UTC,,,56,,6a1cf3df.38,5,,2026-06-01 02:52:15 UTC,,0,LOG,00000,"received fast shutdown request",,,,,,,,,"","postmaster",,0
+2026-06-01 02:52:16.126 UTC,,,56,,6a1cf3df.38,6,,2026-06-01 02:52:15 UTC,,0,LOG,00000,"aborting any active transactions",,,,,,,,,"","postmaster",,0
+2026-06-01 02:52:16.128 UTC,,,56,,6a1cf3df.38,7,,2026-06-01 02:52:15 UTC,,0,LOG,00000,"background worker ""logical replication launcher"" (PID 63) exited with exit code 1",,,,,,,,,"","postmaster",,0
+2026-06-01 02:52:16.128 UTC,,,58,,6a1cf3df.3a,1,,2026-06-01 02:52:15 UTC,,0,LOG,00000,"shutting down",,,,,,,,,"","checkpointer",,0
+2026-06-01 02:52:16.138 UTC,,,58,,6a1cf3df.3a,2,,2026-06-01 02:52:15 UTC,,0,LOG,00000,"checkpoint starting: shutdown immediate",,,,,,,,,"","checkpointer",,0
+2026-06-01 02:52:16.741 UTC,,,58,,6a1cf3df.3a,3,,2026-06-01 02:52:15 UTC,,0,LOG,00000,"checkpoint complete: wrote 965 buffers (5.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.038 s, sync=0.515 s, total=0.614 s; sync files=328, longest=0.102 s, average=0.002 s; distance=4405 kB, estimate=4405 kB; lsn=0/193AEE8, redo lsn=0/193AEE8",,,,,,,,,"","checkpointer",,0
+2026-06-01 02:52:16.750 UTC,,,56,,6a1cf3df.38,8,,2026-06-01 02:52:15 UTC,,0,LOG,00000,"database system is shut down",,,,,,,,,"","postmaster",,0

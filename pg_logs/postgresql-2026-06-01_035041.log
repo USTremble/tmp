@@ -1,0 +1,2 @@
+2026-06-01 03:50:41.420 UTC [48] LOG:  ending log output to stderr
+2026-06-01 03:50:41.420 UTC [48] HINT:  Future log output will go to log destination "csvlog".

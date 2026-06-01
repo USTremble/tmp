@@ -1,0 +1,79 @@
+version: '3.8'
+
+services:
+  postgres:
+    build: .
+    container_name: tmp_db
+    command: >
+      postgres
+      -c shared_preload_libraries=pgaudit
+      -c pgaudit.log=role
+      -c logging_collector=on
+      -c log_destination=csvlog
+      -c log_directory=/var/log/postgresql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1
+      POSTGRES_DB: buildsafe_db
+    volumes:
+      - ./db-init:/docker-entrypoint-initdb.d
+      - postgres_data:/var/lib/postgresql/data
+      - ./pg_logs:/var/log/postgresql
+      - ./pg_secrets:/etc/postgresql/secrets:ro
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d buildsafe_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  api:
+    build: ./backend
+    container_name: ventilation_api
+    ports:
+      - "5252:5252"
+    volumes:
+      - ./backend:/app
+    environment:
+      DB_USER: postgres
+      DB_PASSWORD: 1
+      DB_NAME: buildsafe_db
+      DB_HOST: postgres
+      DB_PORT: 5432
+      JWT_SECRET_KEY: "super-secret-key"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: ventilation_frontend
+    ports:
+      - "3000:3000"
+    stdin_open: true 
+    tty: true
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: tmp_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@example.com"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+  pgadmin_data:

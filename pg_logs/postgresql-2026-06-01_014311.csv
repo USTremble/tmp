@@ -1,0 +1,11 @@
+2026-06-01 01:43:11.123 UTC,,,49,,6a1ce3af.31,1,,2026-06-01 01:43:11 UTC,,0,LOG,00000,"ending log output to stderr",,"Future log output will go to log destination ""csvlog"".",,,,,,,"","postmaster",,0
+2026-06-01 01:43:11.123 UTC,,,49,,6a1ce3af.31,2,,2026-06-01 01:43:11 UTC,,0,LOG,00000,"starting PostgreSQL 17.10 (Debian 17.10-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",,,,,,,,,"","postmaster",,0
+2026-06-01 01:43:11.134 UTC,,,49,,6a1ce3af.31,3,,2026-06-01 01:43:11 UTC,,0,LOG,00000,"listening on Unix socket ""/var/run/postgresql/.s.PGSQL.5432""",,,,,,,,,"","postmaster",,0
+2026-06-01 01:43:11.175 UTC,,,53,,6a1ce3af.35,1,,2026-06-01 01:43:11 UTC,,0,LOG,00000,"database system was shut down at 2026-06-01 01:43:09 UTC",,,,,,,,,"","startup",,0
+2026-06-01 01:43:11.200 UTC,,,49,,6a1ce3af.31,4,,2026-06-01 01:43:11 UTC,,0,LOG,00000,"database system is ready to accept connections",,,,,,,,,"","postmaster",,0
+2026-06-01 01:43:11.524 UTC,"postgres","buildsafe_db",63,"[local]",6a1ce3af.3f,1,"CREATE TABLE",2026-06-01 01:43:11 UTC,2/2,0,ERROR,42P16,"multiple primary keys for table ""roles"" are not allowed",,,,,,"CREATE TABLE IF NOT EXISTS public.roles
+(
+    role_id SERIAL PRIMARY KEY,
+    name character varying(32) NOT NULL,
+    CONSTRAINT roles_pkey PRIMARY KEY (role_id)
+);",120,,"psql","client backend",,0
