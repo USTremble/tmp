@@ -1,0 +1,40 @@
+2026-06-01 12:11:24.180 UTC,,,1,,6a1d76ec.1,1,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"ending log output to stderr",,"Future log output will go to log destination ""csvlog"".",,,,,,,"","postmaster",,0
+2026-06-01 12:11:24.180 UTC,,,1,,6a1d76ec.1,2,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"starting PostgreSQL 17.10 (Debian 17.10-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",,,,,,,,,"","postmaster",,0
+2026-06-01 12:11:24.180 UTC,,,1,,6a1d76ec.1,3,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"listening on IPv4 address ""0.0.0.0"", port 5432",,,,,,,,,"","postmaster",,0
+2026-06-01 12:11:24.180 UTC,,,1,,6a1d76ec.1,4,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"listening on IPv6 address ""::"", port 5432",,,,,,,,,"","postmaster",,0
+2026-06-01 12:11:24.201 UTC,,,1,,6a1d76ec.1,5,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"listening on Unix socket ""/var/run/postgresql/.s.PGSQL.5432""",,,,,,,,,"","postmaster",,0
+2026-06-01 12:11:24.219 UTC,,,70,,6a1d76ec.46,1,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"database system was shut down at 2026-06-01 12:11:24 UTC",,,,,,,,,"","startup",,0
+2026-06-01 12:11:24.229 UTC,,,1,,6a1d76ec.1,6,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"database system is ready to accept connections",,,,,,,,,"","postmaster",,0
+2026-06-01 12:12:03.623 UTC,"postgres","buildsafe_db",82,"172.18.0.3:42224",6a1d76f0.52,1,"SELECT",2026-06-01 12:11:28 UTC,1/68,0,ERROR,42703,"column sensor_subscriptions.zone_id does not exist",,"Perhaps you meant to reference the column ""sensor_subscriptions.type_id"".",,,,"SELECT sensor_subscriptions.sub_id AS sensor_subscriptions_sub_id, sensor_subscriptions.user_id AS sensor_subscriptions_user_id, sensor_subscriptions.zone_id AS sensor_subscriptions_zone_id 
+FROM sensor_subscriptions 
+WHERE sensor_subscriptions.user_id = 2",130,,"","client backend",,0
+2026-06-01 12:12:03.630 UTC,"postgres","buildsafe_db",140,"172.18.0.3:58870",6a1d7713.8c,1,"SELECT",2026-06-01 12:12:03 UTC,9/2,0,ERROR,42703,"column sensor_subscriptions.zone_id does not exist",,"Perhaps you meant to reference the column ""sensor_subscriptions.type_id"".",,,,"SELECT sensor_subscriptions.sub_id AS sensor_subscriptions_sub_id, sensor_subscriptions.user_id AS sensor_subscriptions_user_id, sensor_subscriptions.zone_id AS sensor_subscriptions_zone_id 
+FROM sensor_subscriptions 
+WHERE sensor_subscriptions.user_id = 2",130,,"","client backend",,0
+2026-06-01 12:12:21.149 UTC,"postgres","buildsafe_db",82,"172.18.0.3:42224",6a1d76f0.52,2,"SELECT",2026-06-01 12:11:28 UTC,1/75,0,ERROR,42703,"column sensor_subscriptions.zone_id does not exist",,"Perhaps you meant to reference the column ""sensor_subscriptions.type_id"".",,,,"SELECT sensor_subscriptions.sub_id AS sensor_subscriptions_sub_id, sensor_subscriptions.user_id AS sensor_subscriptions_user_id, sensor_subscriptions.zone_id AS sensor_subscriptions_zone_id 
+FROM sensor_subscriptions 
+WHERE sensor_subscriptions.user_id = 2",130,,"","client backend",,0
+2026-06-01 12:12:21.150 UTC,"postgres","buildsafe_db",140,"172.18.0.3:58870",6a1d7713.8c,2,"SELECT",2026-06-01 12:12:03 UTC,9/9,0,ERROR,42703,"column sensor_subscriptions.zone_id does not exist",,"Perhaps you meant to reference the column ""sensor_subscriptions.type_id"".",,,,"SELECT sensor_subscriptions.sub_id AS sensor_subscriptions_sub_id, sensor_subscriptions.user_id AS sensor_subscriptions_user_id, sensor_subscriptions.zone_id AS sensor_subscriptions_zone_id 
+FROM sensor_subscriptions 
+WHERE sensor_subscriptions.user_id = 2",130,,"","client backend",,0
+2026-06-01 12:12:24.206 UTC,"postgres","buildsafe_db",82,"172.18.0.3:42224",6a1d76f0.52,3,"SELECT",2026-06-01 12:11:28 UTC,1/78,0,ERROR,42703,"column sensor_subscriptions.zone_id does not exist",,"Perhaps you meant to reference the column ""sensor_subscriptions.type_id"".",,,,"SELECT sensor_subscriptions.sub_id AS sensor_subscriptions_sub_id, sensor_subscriptions.user_id AS sensor_subscriptions_user_id, sensor_subscriptions.zone_id AS sensor_subscriptions_zone_id 
+FROM sensor_subscriptions 
+WHERE sensor_subscriptions.user_id = 2",130,,"","client backend",,0
+2026-06-01 12:12:24.208 UTC,"postgres","buildsafe_db",140,"172.18.0.3:58870",6a1d7713.8c,3,"SELECT",2026-06-01 12:12:03 UTC,9/12,0,ERROR,42703,"column sensor_subscriptions.zone_id does not exist",,"Perhaps you meant to reference the column ""sensor_subscriptions.type_id"".",,,,"SELECT sensor_subscriptions.sub_id AS sensor_subscriptions_sub_id, sensor_subscriptions.user_id AS sensor_subscriptions_user_id, sensor_subscriptions.zone_id AS sensor_subscriptions_zone_id 
+FROM sensor_subscriptions 
+WHERE sensor_subscriptions.user_id = 2",130,,"","client backend",,0
+2026-06-01 12:13:49.992 UTC,"postgres","buildsafe_db",82,"172.18.0.3:42224",6a1d76f0.52,4,"SELECT",2026-06-01 12:11:28 UTC,1/83,0,ERROR,42703,"column sensor_subscriptions.zone_id does not exist",,"Perhaps you meant to reference the column ""sensor_subscriptions.type_id"".",,,,"SELECT sensor_subscriptions.sub_id AS sensor_subscriptions_sub_id, sensor_subscriptions.user_id AS sensor_subscriptions_user_id, sensor_subscriptions.zone_id AS sensor_subscriptions_zone_id 
+FROM sensor_subscriptions 
+WHERE sensor_subscriptions.user_id = 2",130,,"","client backend",,0
+2026-06-01 12:13:49.994 UTC,"postgres","buildsafe_db",140,"172.18.0.3:58870",6a1d7713.8c,4,"SELECT",2026-06-01 12:12:03 UTC,9/17,0,ERROR,42703,"column sensor_subscriptions.zone_id does not exist",,"Perhaps you meant to reference the column ""sensor_subscriptions.type_id"".",,,,"SELECT sensor_subscriptions.sub_id AS sensor_subscriptions_sub_id, sensor_subscriptions.user_id AS sensor_subscriptions_user_id, sensor_subscriptions.zone_id AS sensor_subscriptions_zone_id 
+FROM sensor_subscriptions 
+WHERE sensor_subscriptions.user_id = 2",130,,"","client backend",,0
+2026-06-01 12:16:24.305 UTC,,,68,,6a1d76ec.44,1,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"checkpoint starting: time",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:16:29.973 UTC,,,68,,6a1d76ec.44,2,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"checkpoint complete: wrote 59 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.623 s, sync=0.019 s, total=5.668 s; sync files=23, longest=0.009 s, average=0.001 s; distance=278 kB, estimate=278 kB; lsn=0/1980C90, redo lsn=0/1980C00",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:18:16.799 UTC,,,1,,6a1d76ec.1,7,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"received fast shutdown request",,,,,,,,,"","postmaster",,0
+2026-06-01 12:18:16.802 UTC,,,1,,6a1d76ec.1,8,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"aborting any active transactions",,,,,,,,,"","postmaster",,0
+2026-06-01 12:18:16.805 UTC,,,1,,6a1d76ec.1,9,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"background worker ""logical replication launcher"" (PID 73) exited with exit code 1",,,,,,,,,"","postmaster",,0
+2026-06-01 12:18:16.805 UTC,,,68,,6a1d76ec.44,3,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"shutting down",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:18:16.809 UTC,,,68,,6a1d76ec.44,4,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"checkpoint starting: shutdown immediate",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:18:16.823 UTC,,,68,,6a1d76ec.44,5,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.019 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=250 kB; lsn=0/1980D40, redo lsn=0/1980D40",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:18:16.830 UTC,,,1,,6a1d76ec.1,10,,2026-06-01 12:11:24 UTC,,0,LOG,00000,"database system is shut down",,,,,,,,,"","postmaster",,0

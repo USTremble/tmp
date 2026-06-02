@@ -36,6 +36,7 @@ class Sensor(db.Model):
     type_id = db.Column(db.Integer, db.ForeignKey('sensor_types.type_id'), nullable=False)
     serial_number = db.Column(db.String(50))
     status = db.Column(db.String(32), nullable=False)
+    last_inspection_date = db.Column(db.DateTime, default=datetime.utcnow)
 
 class SensorHistory(db.Model):
     __tablename__ = 'sensor_history'
@@ -45,3 +46,9 @@ class SensorHistory(db.Model):
     event_type = db.Column(db.String(32), nullable=False)
     event_date = db.Column(db.DateTime, default=datetime.utcnow)
     notes = db.Column(db.Text)
+
+class SensorSubscription(db.Model):
+    __tablename__ = 'sensor_subscriptions'
+    sub_id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
+    zone_id = db.Column(db.Integer, db.ForeignKey('zones.zone_id'), nullable=False)

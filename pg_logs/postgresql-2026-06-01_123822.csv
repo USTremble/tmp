@@ -1,0 +1,20 @@
+2026-06-01 12:38:22.493 UTC,,,1,,6a1d7d3e.1,1,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"ending log output to stderr",,"Future log output will go to log destination ""csvlog"".",,,,,,,"","postmaster",,0
+2026-06-01 12:38:22.493 UTC,,,1,,6a1d7d3e.1,2,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"starting PostgreSQL 17.10 (Debian 17.10-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",,,,,,,,,"","postmaster",,0
+2026-06-01 12:38:22.493 UTC,,,1,,6a1d7d3e.1,3,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"listening on IPv4 address ""0.0.0.0"", port 5432",,,,,,,,,"","postmaster",,0
+2026-06-01 12:38:22.493 UTC,,,1,,6a1d7d3e.1,4,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"listening on IPv6 address ""::"", port 5432",,,,,,,,,"","postmaster",,0
+2026-06-01 12:38:22.522 UTC,,,1,,6a1d7d3e.1,5,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"listening on Unix socket ""/var/run/postgresql/.s.PGSQL.5432""",,,,,,,,,"","postmaster",,0
+2026-06-01 12:38:22.544 UTC,,,77,,6a1d7d3e.4d,1,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"database system was shut down at 2026-06-01 12:38:22 UTC",,,,,,,,,"","startup",,0
+2026-06-01 12:38:22.559 UTC,,,1,,6a1d7d3e.1,6,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"database system is ready to accept connections",,,,,,,,,"","postmaster",,0
+2026-06-01 12:43:22.629 UTC,,,75,,6a1d7d3e.4b,1,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"checkpoint starting: time",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:43:29.308 UTC,,,75,,6a1d7d3e.4b,2,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"checkpoint complete: wrote 58 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.542 s, sync=0.772 s, total=6.680 s; sync files=22, longest=0.400 s, average=0.036 s; distance=278 kB, estimate=278 kB; lsn=0/1980CC8, redo lsn=0/1980C38",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:44:24.861 UTC,"postgres","buildsafe_db",141,"172.18.0.4:49376",6a1d7d60.8d,1,"UPDATE",2026-06-01 12:38:56 UTC,10/16,0,ERROR,22P02,"invalid input syntax for type bigint: ""авываыва""",,,,,,"UPDATE users SET telegram_id='авываыва' WHERE users.user_id = 2",30,,"","client backend",,0
+2026-06-01 12:44:30.536 UTC,"postgres","buildsafe_db",140,"172.18.0.4:49374",6a1d7d60.8c,1,"UPDATE",2026-06-01 12:38:56 UTC,9/16,0,ERROR,22P02,"invalid input syntax for type bigint: ""авываыва""",,,,,,"UPDATE users SET telegram_id='авываыва' WHERE users.user_id = 2",30,,"","client backend",,0
+2026-06-01 12:48:22.393 UTC,,,75,,6a1d7d3e.4b,3,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"checkpoint starting: time",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:48:22.639 UTC,,,75,,6a1d7d3e.4b,4,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.213 s, sync=0.015 s, total=0.247 s; sync files=3, longest=0.011 s, average=0.005 s; distance=0 kB, estimate=250 kB; lsn=0/1981078, redo lsn=0/1981020",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:50:49.870 UTC,,,1,,6a1d7d3e.1,7,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"received fast shutdown request",,,,,,,,,"","postmaster",,0
+2026-06-01 12:50:49.875 UTC,,,1,,6a1d7d3e.1,8,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"aborting any active transactions",,,,,,,,,"","postmaster",,0
+2026-06-01 12:50:49.877 UTC,,,1,,6a1d7d3e.1,9,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"background worker ""logical replication launcher"" (PID 80) exited with exit code 1",,,,,,,,,"","postmaster",,0
+2026-06-01 12:50:49.878 UTC,,,75,,6a1d7d3e.4b,5,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"shutting down",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:50:49.881 UTC,,,75,,6a1d7d3e.4b,6,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"checkpoint starting: shutdown immediate",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:50:49.894 UTC,,,75,,6a1d7d3e.4b,7,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.017 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=225 kB; lsn=0/1981128, redo lsn=0/1981128",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:50:49.901 UTC,,,1,,6a1d7d3e.1,10,,2026-06-01 12:38:22 UTC,,0,LOG,00000,"database system is shut down",,,,,,,,,"","postmaster",,0

@@ -1,0 +1,72 @@
+2026-06-01 11:35:49.024 UTC,,,1,,6a1d6e94.1,1,,2026-06-01 11:35:48 UTC,,0,LOG,00000,"ending log output to stderr",,"Future log output will go to log destination ""csvlog"".",,,,,,,"","postmaster",,0
+2026-06-01 11:35:49.024 UTC,,,1,,6a1d6e94.1,2,,2026-06-01 11:35:48 UTC,,0,LOG,00000,"starting PostgreSQL 17.10 (Debian 17.10-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",,,,,,,,,"","postmaster",,0
+2026-06-01 11:35:49.024 UTC,,,1,,6a1d6e94.1,3,,2026-06-01 11:35:48 UTC,,0,LOG,00000,"listening on IPv4 address ""0.0.0.0"", port 5432",,,,,,,,,"","postmaster",,0
+2026-06-01 11:35:49.024 UTC,,,1,,6a1d6e94.1,4,,2026-06-01 11:35:48 UTC,,0,LOG,00000,"listening on IPv6 address ""::"", port 5432",,,,,,,,,"","postmaster",,0
+2026-06-01 11:35:49.033 UTC,,,1,,6a1d6e94.1,5,,2026-06-01 11:35:48 UTC,,0,LOG,00000,"listening on Unix socket ""/var/run/postgresql/.s.PGSQL.5432""",,,,,,,,,"","postmaster",,0
+2026-06-01 11:35:49.043 UTC,,,70,,6a1d6e95.46,1,,2026-06-01 11:35:49 UTC,,0,LOG,00000,"database system was shut down at 2026-06-01 11:35:48 UTC",,,,,,,,,"","startup",,0
+2026-06-01 11:35:49.051 UTC,,,1,,6a1d6e94.1,6,,2026-06-01 11:35:48 UTC,,0,LOG,00000,"database system is ready to accept connections",,,,,,,,,"","postmaster",,0
+2026-06-01 11:36:15.940 UTC,"postgres","buildsafe_db",90,"172.18.0.4:36000",6a1d6ea0.5a,1,"SELECT",2026-06-01 11:36:00 UTC,2/6,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.status = 'failure'",232,,"","client backend",,0
+2026-06-01 11:36:15.941 UTC,"postgres","buildsafe_db",91,"172.18.0.4:36012",6a1d6ea0.5b,1,"SELECT",2026-06-01 11:36:00 UTC,3/9,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.status = 'failure'",232,,"","client backend",,0
+2026-06-01 11:36:18.491 UTC,"postgres","buildsafe_db",90,"172.18.0.4:36000",6a1d6ea0.5a,2,"SELECT",2026-06-01 11:36:00 UTC,2/8,0,ERROR,42703,"column sensor_subscriptions.zone_id does not exist",,"Perhaps you meant to reference the column ""sensor_subscriptions.type_id"".",,,,"SELECT sensor_subscriptions.sub_id AS sensor_subscriptions_sub_id, sensor_subscriptions.user_id AS sensor_subscriptions_user_id, sensor_subscriptions.zone_id AS sensor_subscriptions_zone_id 
+FROM sensor_subscriptions 
+WHERE sensor_subscriptions.user_id = 2",130,,"","client backend",,0
+2026-06-01 11:36:18.503 UTC,"postgres","buildsafe_db",125,"172.18.0.4:60912",6a1d6eb2.7d,1,"SELECT",2026-06-01 11:36:18 UTC,8/2,0,ERROR,42703,"column sensor_subscriptions.zone_id does not exist",,"Perhaps you meant to reference the column ""sensor_subscriptions.type_id"".",,,,"SELECT sensor_subscriptions.sub_id AS sensor_subscriptions_sub_id, sensor_subscriptions.user_id AS sensor_subscriptions_user_id, sensor_subscriptions.zone_id AS sensor_subscriptions_zone_id 
+FROM sensor_subscriptions 
+WHERE sensor_subscriptions.user_id = 2",130,,"","client backend",,0
+2026-06-01 11:36:21.678 UTC,"postgres","buildsafe_db",90,"172.18.0.4:36000",6a1d6ea0.5a,3,"SELECT",2026-06-01 11:36:00 UTC,2/10,0,ERROR,42703,"column sensor_subscriptions.zone_id does not exist",,"Perhaps you meant to reference the column ""sensor_subscriptions.type_id"".",,,,"SELECT sensor_subscriptions.sub_id AS sensor_subscriptions_sub_id, sensor_subscriptions.user_id AS sensor_subscriptions_user_id, sensor_subscriptions.zone_id AS sensor_subscriptions_zone_id 
+FROM sensor_subscriptions 
+WHERE sensor_subscriptions.user_id = 2",130,,"","client backend",,0
+2026-06-01 11:36:21.683 UTC,"postgres","buildsafe_db",125,"172.18.0.4:60912",6a1d6eb2.7d,2,"SELECT",2026-06-01 11:36:18 UTC,8/4,0,ERROR,42703,"column sensor_subscriptions.zone_id does not exist",,"Perhaps you meant to reference the column ""sensor_subscriptions.type_id"".",,,,"SELECT sensor_subscriptions.sub_id AS sensor_subscriptions_sub_id, sensor_subscriptions.user_id AS sensor_subscriptions_user_id, sensor_subscriptions.zone_id AS sensor_subscriptions_zone_id 
+FROM sensor_subscriptions 
+WHERE sensor_subscriptions.user_id = 2",130,,"","client backend",,0
+2026-06-01 11:36:23.027 UTC,"postgres","buildsafe_db",125,"172.18.0.4:60912",6a1d6eb2.7d,3,"SELECT",2026-06-01 11:36:18 UTC,8/5,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.zone_id = 1",232,,"","client backend",,0
+2026-06-01 11:36:23.028 UTC,"postgres","buildsafe_db",91,"172.18.0.4:36012",6a1d6ea0.5b,2,"SELECT",2026-06-01 11:36:00 UTC,3/16,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.zone_id = 1",232,,"","client backend",,0
+2026-06-01 11:36:24.796 UTC,"postgres","buildsafe_db",91,"172.18.0.4:36012",6a1d6ea0.5b,3,"SELECT",2026-06-01 11:36:00 UTC,3/17,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.zone_id = 2",232,,"","client backend",,0
+2026-06-01 11:36:24.798 UTC,"postgres","buildsafe_db",90,"172.18.0.4:36000",6a1d6ea0.5a,4,"SELECT",2026-06-01 11:36:00 UTC,2/13,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.zone_id = 2",232,,"","client backend",,0
+2026-06-01 11:36:26.557 UTC,"postgres","buildsafe_db",90,"172.18.0.4:36000",6a1d6ea0.5a,5,"SELECT",2026-06-01 11:36:00 UTC,2/14,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.zone_id = 3",232,,"","client backend",,0
+2026-06-01 11:36:26.558 UTC,"postgres","buildsafe_db",125,"172.18.0.4:60912",6a1d6eb2.7d,4,"SELECT",2026-06-01 11:36:18 UTC,8/8,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.zone_id = 3",232,,"","client backend",,0
+2026-06-01 11:36:27.989 UTC,"postgres","buildsafe_db",125,"172.18.0.4:60912",6a1d6eb2.7d,5,"SELECT",2026-06-01 11:36:18 UTC,8/9,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.zone_id = 2",232,,"","client backend",,0
+2026-06-01 11:36:27.991 UTC,"postgres","buildsafe_db",91,"172.18.0.4:36012",6a1d6ea0.5b,4,"SELECT",2026-06-01 11:36:00 UTC,3/20,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.zone_id = 2",232,,"","client backend",,0
+2026-06-01 11:36:32.045 UTC,"postgres","buildsafe_db",91,"172.18.0.4:36012",6a1d6ea0.5b,5,"INSERT",2026-06-01 11:36:00 UTC,3/21,0,ERROR,42703,"column ""last_inspection_date"" of relation ""sensors"" does not exist",,,,,,"INSERT INTO sensors (name, zone_id, type_id, serial_number, status, last_inspection_date) VALUES ('132', 2, 3, '123', 'active', '2026-06-01T11:36:32.043802'::timestamp) RETURNING sensors.sensor_id",69,,"","client backend",,0
+2026-06-01 11:36:42.741 UTC,"postgres","buildsafe_db",91,"172.18.0.4:36012",6a1d6ea0.5b,6,"INSERT",2026-06-01 11:36:00 UTC,3/22,0,ERROR,42703,"column ""last_inspection_date"" of relation ""sensors"" does not exist",,,,,,"INSERT INTO sensors (name, zone_id, type_id, serial_number, status, last_inspection_date) VALUES ('123', 2, 3, '123', 'active', '2026-06-01T11:36:42.740326'::timestamp) RETURNING sensors.sensor_id",69,,"","client backend",,0
+2026-06-01 11:37:09.942 UTC,"postgres","buildsafe_db",90,"172.18.0.4:36000",6a1d6ea0.5a,6,"SELECT",2026-06-01 11:36:00 UTC,2/18,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.zone_id = 2",232,,"","client backend",,0
+2026-06-01 11:37:09.944 UTC,"postgres","buildsafe_db",125,"172.18.0.4:60912",6a1d6eb2.7d,6,"SELECT",2026-06-01 11:36:18 UTC,8/12,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.zone_id = 2",232,,"","client backend",,0
+2026-06-01 11:37:19.139 UTC,"postgres","buildsafe_db",125,"172.18.0.4:60912",6a1d6eb2.7d,7,"SELECT",2026-06-01 11:36:18 UTC,8/13,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.zone_id = 2",232,,"","client backend",,0
+2026-06-01 11:37:19.140 UTC,"postgres","buildsafe_db",91,"172.18.0.4:36012",6a1d6ea0.5b,7,"SELECT",2026-06-01 11:36:00 UTC,3/24,0,ERROR,42703,"column sensors.last_inspection_date does not exist",,,,,,"SELECT sensors.sensor_id AS sensors_sensor_id, sensors.name AS sensors_name, sensors.zone_id AS sensors_zone_id, sensors.type_id AS sensors_type_id, sensors.serial_number AS sensors_serial_number, sensors.status AS sensors_status, sensors.last_inspection_date AS sensors_last_inspection_date 
+FROM sensors 
+WHERE sensors.zone_id = 2",232,,"","client backend",,0
+2026-06-01 11:40:49.130 UTC,,,68,,6a1d6e95.44,1,,2026-06-01 11:35:49 UTC,,0,LOG,00000,"checkpoint starting: time",,,,,,,,,"","checkpointer",,0
+2026-06-01 11:40:54.710 UTC,,,68,,6a1d6e95.44,2,,2026-06-01 11:35:49 UTC,,0,LOG,00000,"checkpoint complete: wrote 58 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.519 s, sync=0.038 s, total=5.581 s; sync files=22, longest=0.021 s, average=0.002 s; distance=271 kB, estimate=271 kB; lsn=0/197EB98, redo lsn=0/197EB08",,,,,,,,,"","checkpointer",,0
+2026-06-01 11:40:57.792 UTC,,,1,,6a1d6e94.1,7,,2026-06-01 11:35:48 UTC,,0,LOG,00000,"received fast shutdown request",,,,,,,,,"","postmaster",,0
+2026-06-01 11:40:57.796 UTC,,,1,,6a1d6e94.1,8,,2026-06-01 11:35:48 UTC,,0,LOG,00000,"aborting any active transactions",,,,,,,,,"","postmaster",,0
+2026-06-01 11:40:57.798 UTC,,,1,,6a1d6e94.1,9,,2026-06-01 11:35:48 UTC,,0,LOG,00000,"background worker ""logical replication launcher"" (PID 73) exited with exit code 1",,,,,,,,,"","postmaster",,0
+2026-06-01 11:40:57.799 UTC,,,68,,6a1d6e95.44,3,,2026-06-01 11:35:49 UTC,,0,LOG,00000,"shutting down",,,,,,,,,"","checkpointer",,0
+2026-06-01 11:40:57.803 UTC,,,68,,6a1d6e95.44,4,,2026-06-01 11:35:49 UTC,,0,LOG,00000,"checkpoint starting: shutdown immediate",,,,,,,,,"","checkpointer",,0
+2026-06-01 11:40:57.818 UTC,,,68,,6a1d6e95.44,5,,2026-06-01 11:35:49 UTC,,0,LOG,00000,"checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.019 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=243 kB; lsn=0/197EC10, redo lsn=0/197EC10",,,,,,,,,"","checkpointer",,0
+2026-06-01 11:40:57.823 UTC,,,1,,6a1d6e94.1,10,,2026-06-01 11:35:48 UTC,,0,LOG,00000,"database system is shut down",,,,,,,,,"","postmaster",,0

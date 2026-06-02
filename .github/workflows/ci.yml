@@ -7,17 +7,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: List files
-      run: ls -R
-
-
+    # --- ПРОВЕРКА БЭКЕНДА ---
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -25,15 +22,13 @@ jobs:
 
     - name: Install Backend Dependencies
       run: |
-        # Проверяем, есть ли папка, прежде чем заходить
-        if [ -d "backend" ]; then
-          cd backend
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+        if [ -f "backend/requirements.txt" ]; then
+          cd backend && pip install -r requirements.txt
         else
-          echo "Папка backend не найдена, пропускаем"
+          echo "Файл requirements.txt не найден в папке backend/"
         fi
 
+    # --- ПРОВЕРКА ФРОНТЕНДА ---
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
@@ -41,20 +36,24 @@ jobs:
 
     - name: Install Frontend Dependencies
       run: |
-        if [ -d "frontend" ]; then
-          cd frontend
+        # Проверяем корень или папку frontend
+        if [ -f "package.json" ]; then
           npm install
+        elif [ -d "frontend" ] && [ -f "frontend/package.json" ]; then
+          cd frontend && npm install
         else
-          echo "Папка frontend не найдена, пропускаем"
+          echo "package.json не найден!"
+          exit 1
         fi
 
     - name: Build Frontend
       env:
-        CI: false
+        CI: false 
       run: |
-        if [ -d "frontend" ]; then
-          cd frontend
-          npm run build
+        if [ -f "package.json" ]; then
+          npm run build --if-present
+        else
+          cd frontend && npm run build --if-present
         fi
 
     - name: Success Message

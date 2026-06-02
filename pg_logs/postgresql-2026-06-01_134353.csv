@@ -1,0 +1,14 @@
+2026-06-01 13:43:53.970 UTC,,,1,,6a1d8c99.1,1,,2026-06-01 13:43:53 UTC,,0,LOG,00000,"ending log output to stderr",,"Future log output will go to log destination ""csvlog"".",,,,,,,"","postmaster",,0
+2026-06-01 13:43:53.970 UTC,,,1,,6a1d8c99.1,2,,2026-06-01 13:43:53 UTC,,0,LOG,00000,"starting PostgreSQL 17.10 (Debian 17.10-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",,,,,,,,,"","postmaster",,0
+2026-06-01 13:43:53.970 UTC,,,1,,6a1d8c99.1,3,,2026-06-01 13:43:53 UTC,,0,LOG,00000,"listening on IPv4 address ""0.0.0.0"", port 5432",,,,,,,,,"","postmaster",,0
+2026-06-01 13:43:53.970 UTC,,,1,,6a1d8c99.1,4,,2026-06-01 13:43:53 UTC,,0,LOG,00000,"listening on IPv6 address ""::"", port 5432",,,,,,,,,"","postmaster",,0
+2026-06-01 13:43:53.993 UTC,,,1,,6a1d8c99.1,5,,2026-06-01 13:43:53 UTC,,0,LOG,00000,"listening on Unix socket ""/var/run/postgresql/.s.PGSQL.5432""",,,,,,,,,"","postmaster",,0
+2026-06-01 13:43:54.006 UTC,,,70,,6a1d8c9a.46,1,,2026-06-01 13:43:54 UTC,,0,LOG,00000,"database system was shut down at 2026-06-01 13:43:53 UTC",,,,,,,,,"","startup",,0
+2026-06-01 13:43:54.028 UTC,,,1,,6a1d8c99.1,6,,2026-06-01 13:43:53 UTC,,0,LOG,00000,"database system is ready to accept connections",,,,,,,,,"","postmaster",,0
+2026-06-01 13:47:02.099 UTC,,,1,,6a1d8c99.1,7,,2026-06-01 13:43:53 UTC,,0,LOG,00000,"received fast shutdown request",,,,,,,,,"","postmaster",,0
+2026-06-01 13:47:02.107 UTC,,,1,,6a1d8c99.1,8,,2026-06-01 13:43:53 UTC,,0,LOG,00000,"aborting any active transactions",,,,,,,,,"","postmaster",,0
+2026-06-01 13:47:02.109 UTC,,,1,,6a1d8c99.1,9,,2026-06-01 13:43:53 UTC,,0,LOG,00000,"background worker ""logical replication launcher"" (PID 73) exited with exit code 1",,,,,,,,,"","postmaster",,0
+2026-06-01 13:47:02.109 UTC,,,68,,6a1d8c9a.44,1,,2026-06-01 13:43:54 UTC,,0,LOG,00000,"shutting down",,,,,,,,,"","checkpointer",,0
+2026-06-01 13:47:02.113 UTC,,,68,,6a1d8c9a.44,2,,2026-06-01 13:43:54 UTC,,0,LOG,00000,"checkpoint starting: shutdown immediate",,,,,,,,,"","checkpointer",,0
+2026-06-01 13:47:02.169 UTC,,,68,,6a1d8c9a.44,3,,2026-06-01 13:43:54 UTC,,0,LOG,00000,"checkpoint complete: wrote 49 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.017 s, sync=0.026 s, total=0.060 s; sync files=13, longest=0.021 s, average=0.002 s; distance=270 kB, estimate=270 kB; lsn=0/197EB10, redo lsn=0/197EB10",,,,,,,,,"","checkpointer",,0
+2026-06-01 13:47:02.176 UTC,,,1,,6a1d8c99.1,10,,2026-06-01 13:43:53 UTC,,0,LOG,00000,"database system is shut down",,,,,,,,,"","postmaster",,0

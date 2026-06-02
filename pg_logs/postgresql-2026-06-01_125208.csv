@@ -1,0 +1,13 @@
+2026-06-01 12:52:08.876 UTC,,,55,,6a1d8078.37,1,,2026-06-01 12:52:08 UTC,,0,LOG,00000,"ending log output to stderr",,"Future log output will go to log destination ""csvlog"".",,,,,,,"","postmaster",,0
+2026-06-01 12:52:08.876 UTC,,,55,,6a1d8078.37,2,,2026-06-01 12:52:08 UTC,,0,LOG,00000,"starting PostgreSQL 17.10 (Debian 17.10-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",,,,,,,,,"","postmaster",,0
+2026-06-01 12:52:08.883 UTC,,,55,,6a1d8078.37,3,,2026-06-01 12:52:08 UTC,,0,LOG,00000,"listening on Unix socket ""/var/run/postgresql/.s.PGSQL.5432""",,,,,,,,,"","postmaster",,0
+2026-06-01 12:52:08.898 UTC,,,59,,6a1d8078.3b,1,,2026-06-01 12:52:08 UTC,,0,LOG,00000,"database system was shut down at 2026-06-01 12:52:01 UTC",,,,,,,,,"","startup",,0
+2026-06-01 12:52:08.906 UTC,,,55,,6a1d8078.37,4,,2026-06-01 12:52:08 UTC,,0,LOG,00000,"database system is ready to accept connections",,,,,,,,,"","postmaster",,0
+2026-06-01 12:52:13.484 UTC,"postgres","buildsafe_db",75,"[local]",6a1d807d.4b,1,"startup",2026-06-01 12:52:13 UTC,2/1,0,FATAL,3D000,"database ""buildsafe_db"" does not exist",,,,,,,,,"","client backend",,0
+2026-06-01 12:52:17.672 UTC,,,55,,6a1d8078.37,5,,2026-06-01 12:52:08 UTC,,0,LOG,00000,"received fast shutdown request",,,,,,,,,"","postmaster",,0
+2026-06-01 12:52:17.696 UTC,,,55,,6a1d8078.37,6,,2026-06-01 12:52:08 UTC,,0,LOG,00000,"aborting any active transactions",,,,,,,,,"","postmaster",,0
+2026-06-01 12:52:17.698 UTC,,,55,,6a1d8078.37,7,,2026-06-01 12:52:08 UTC,,0,LOG,00000,"background worker ""logical replication launcher"" (PID 62) exited with exit code 1",,,,,,,,,"","postmaster",,0
+2026-06-01 12:52:17.698 UTC,,,57,,6a1d8078.39,1,,2026-06-01 12:52:08 UTC,,0,LOG,00000,"shutting down",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:52:17.714 UTC,,,57,,6a1d8078.39,2,,2026-06-01 12:52:08 UTC,,0,LOG,00000,"checkpoint starting: shutdown immediate",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:52:18.389 UTC,,,57,,6a1d8078.39,3,,2026-06-01 12:52:08 UTC,,0,LOG,00000,"checkpoint complete: wrote 965 buffers (5.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.033 s, sync=0.590 s, total=0.691 s; sync files=328, longest=0.404 s, average=0.002 s; distance=4406 kB, estimate=4406 kB; lsn=0/193B2F0, redo lsn=0/193B2F0",,,,,,,,,"","checkpointer",,0
+2026-06-01 12:52:18.398 UTC,,,55,,6a1d8078.37,8,,2026-06-01 12:52:08 UTC,,0,LOG,00000,"database system is shut down",,,,,,,,,"","postmaster",,0

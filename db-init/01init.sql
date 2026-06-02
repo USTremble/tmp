@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS public.sensors
     zone_id integer NOT NULL,
     type_id integer NOT NULL,
     serial_number character varying(50),
+    last_inspection_date timestamp DEFAULT CURRENT_TIMESTAMP,
     status character varying(32) NOT NULL,
     CONSTRAINT sensors_pkey PRIMARY KEY (sensor_id),
     CONSTRAINT sensors_zone_id_fkey FOREIGN KEY (zone_id)
@@ -71,11 +72,11 @@ CREATE TABLE IF NOT EXISTS public.sensor_subscriptions
 (
     sub_id SERIAL,
     user_id integer NOT NULL,
-    type_id integer NOT NULL,
+    zone_id integer NOT NULL,
     CONSTRAINT sensor_subscriptions_pkey PRIMARY KEY (sub_id),
     CONSTRAINT sensor_subscriptions_user_id_fkey FOREIGN KEY (user_id)
         REFERENCES public.users (user_id) ON DELETE CASCADE,
-    CONSTRAINT sensor_subscriptions_type_id_fkey FOREIGN KEY (type_id)
-        REFERENCES public.sensor_types (type_id) ON DELETE CASCADE
+    CONSTRAINT sensor_subscriptions_zone_id_fkey FOREIGN KEY (zone_id)
+        REFERENCES public.zones (zone_id) ON DELETE CASCADE
 );
 
