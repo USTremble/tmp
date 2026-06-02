@@ -14,7 +14,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # --- ПРОВЕРКА БЭКЕНДА ---
+    # --- УНИВЕРСАЛЬНЫЙ ПОИСК И СБОРКА БЭКЕНДА ---
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -22,13 +22,16 @@ jobs:
 
     - name: Install Backend Dependencies
       run: |
-        if [ -f "backend/requirements.txt" ]; then
-          cd backend && pip install -r requirements.txt
+        # Ищем файл requirements.txt во всем репозитории
+        REQ_PATH=$(find . -name "requirements.txt" | head -n 1)
+        if [ -n "$REQ_PATH" ]; then
+          echo "Нашел зависимости бэкенда в: $REQ_PATH"
+          pip install -r "$REQ_PATH"
         else
-          echo "Файл requirements.txt не найден в папке backend/"
+          echo "Файл requirements.txt не найден!"
         fi
 
-    # --- ПРОВЕРКА ФРОНТЕНДА ---
+    # --- УНИВЕРСАЛЬНЫЙ ПОИСК И СБОРКА ФРОНТЕНДА ---
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
@@ -36,25 +39,26 @@ jobs:
 
     - name: Install Frontend Dependencies
       run: |
-        # Проверяем корень или папку frontend
-        if [ -f "package.json" ]; then
+        # Ищем папку, где лежит package.json
+        PACKAGE_PATH=$(find . -name "package.json" -not -path "*/node_modules/*" | head -n 1)
+        if [ -n "$PACKAGE_PATH" ]; then
+          FRONT_DIR=$(dirname "$PACKAGE_PATH")
+          echo "Нашел фронтенд в папке: $FRONT_DIR"
+          cd "$FRONT_DIR"
           npm install
-        elif [ -d "frontend" ] && [ -f "frontend/package.json" ]; then
-          cd frontend && npm install
         else
-          echo "package.json не найден!"
+          echo "Файл package.json не найден!"
           exit 1
         fi
 
     - name: Build Frontend
       env:
-        CI: false 
+        CI: false
       run: |
-        if [ -f "package.json" ]; then
-          npm run build --if-present
-        else
-          cd frontend && npm run build --if-present
-        fi
+        PACKAGE_PATH=$(find . -name "package.json" -not -path "*/node_modules/*" | head -n 1)
+        FRONT_DIR=$(dirname "$PACKAGE_PATH")
+        cd "$FRONT_DIR"
+        npm run build --if-present
 
     - name: Success Message
-      run: echo "Done"
+      run: echo "DONE"
