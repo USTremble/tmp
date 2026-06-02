@@ -14,7 +14,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # --- УНИВЕРСАЛЬНЫЙ ПОИСК И СБОРКА БЭКЕНДА ---
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
@@ -31,7 +30,6 @@ jobs:
           echo "Файл requirements.txt не найден!"
         fi
 
-    # --- УНИВЕРСАЛЬНЫЙ ПОИСК И СБОРКА ФРОНТЕНДА ---
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
@@ -39,7 +37,6 @@ jobs:
 
     - name: Install Frontend Dependencies
       run: |
-        # Ищем папку, где лежит package.json
         PACKAGE_PATH=$(find . -name "package.json" -not -path "*/node_modules/*" | head -n 1)
         if [ -n "$PACKAGE_PATH" ]; then
           FRONT_DIR=$(dirname "$PACKAGE_PATH")
